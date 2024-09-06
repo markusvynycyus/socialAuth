@@ -16,14 +16,17 @@ public class UserService {
     @Autowired
     private RoleRepository roleRepository;
 
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+
 
 
     public User buscarOuFalhar(Long userId) {
         return userRepository.findById(userId)
                 .orElseThrow(() -> new UserNaoEncontradoException(userId));
     }
+
 
 
 }
