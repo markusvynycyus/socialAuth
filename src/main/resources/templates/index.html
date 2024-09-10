@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1>Home</h1>
+<div th:if="${name}">
+    <p>Welcome, <span th:text="${name}">User</span>!</p>
+</div>
+<div th:if="${!name}">
+    <p>Please <a href="/login">log in</a>.</p>
+</div>
+</body>
+</html>

@@ -34,4 +34,12 @@ public class User {
     @Column(name = "oauth_provider")
     private String oauthProvider;
 
+    public boolean isNovo() {
+        return getId() == null;
+    }
+
+//    public boolean isSenhaAlterada() {
+//        // Verifica se a senha foi alterada comparando a senha atual com a senha armazenada no banco de dados
+//        return !passwordEncoder.matches(this.getPassword(), this.getStoredPassword());
+//    }
 }
